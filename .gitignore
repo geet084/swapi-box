@@ -11,6 +11,9 @@
 # production
 /build
 
+# Ignore readme images
+Screenshot/
+
 # misc
 .DS_Store
 .env.local
