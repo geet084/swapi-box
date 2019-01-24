@@ -2,7 +2,11 @@ import React from 'react'
 
 const Nav = (props) => {
   // console.log(props)
-  return <div>buttons here?</div>
+  return (
+    <div>
+      <button onClick={props.showMore}>PEOPLE</button>
+    </div>
+  )
 }
 
 export default Nav;

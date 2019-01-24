@@ -73,33 +73,19 @@ export default class App extends Component {
 
   }
 
-  showPage = () => {
-    let { movie, people } = this.state;
-    return (
-      <div className="App">
-        <ScrollBox movie={movie.opening_crawl} />
-        <Favorites />
-        <button onClick={this.fetchPeople}>people</button>
-        <Nav {...movie}/>
-        <Display />
-        
-        <p>{movie.title}</p>
-        <div>{
-          people.map((person, i) => {
-            return (
-              <p key={person.name}>
-                {i + 1}..Name: {person.name}...World: {person.world}...Pop: {person.population}...spec: {person.spec}
-              </p>
-            )
-          })
-        }</div>
-      </div>
-    );
-  }
-
   render() {
-    if (this.state.movie !== {}) {
-      return this.showPage()
+    let { movie, people } = this.state;
+
+    if (movie !== {}) {
+      return (
+        <main className="App">
+          <ScrollBox movie={movie.opening_crawl} />
+          <p>{movie.title}</p>
+          <Favorites />
+          <Nav showMore={this.fetchPeople} />
+          <Display people={people} />
+        </main>
+      );
     } else {
       return <div>nothing to show</div>
     }
