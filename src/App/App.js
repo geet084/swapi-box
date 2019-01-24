@@ -12,7 +12,8 @@ export default class App extends Component {
       movie: {},
       activeChoice: '',
       people: [],
-      planets: []
+      planets: [],
+      vehicles: []
     }
   }
 
@@ -84,12 +85,33 @@ export default class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(planetList => planetList.results)
+      // .then(planetRes => this.fetchResidents(planetRes))
       .then(planets => this.setState({ planets, activeChoice: 'planets' }))
 
   }
 
+  // fetchResidents = (planets) => {
+  //   let updatedPlanets = planets.map(planet => {
+  //     let peeps = planet.residents.map(resident => {
+  //       let thing = fetch(resident)
+  //         .then(response => response.json())
+  //         .then(res => ({ name: res.name }))
+  //       return thing;
+  //     })
+  //     // planet.inhabitants = Promise.all(peeps)
+  //     // console.log('dddddddd', planet)
+  //     return planet
+  //   })
+  //   return updatedPlanets;
+  // }
+
   fetchVehicles = () => {
-    console.log('vehicles')
+    const url = 'https://swapi.co/api/vehicles/'
+
+    fetch(url)
+      .then(response => response.json())
+      .then(vehicleList => vehicleList.results)
+      .then(vehicles => this.setState({ vehicles, activeChoice: 'vehicles'}))
   }
 
   render() {
