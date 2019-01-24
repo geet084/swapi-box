@@ -1,21 +1,38 @@
 import React from 'react'
+import Card from '../Card/Card'
+import './Display.scss'
 
 const Display = (props) => {
+  let { choice, people, planets } = props;
   
-  return (
-    <div>
-      <h4>DISPLAY AREA</h4>
-      {
-        props.people.map((person, i) => {
-          return (
-            <p key={person.name}>
-              {i + 1}..Name: {person.name}...World: {person.world}...Pop: {person.population}...spec: {person.spec}
-            </p>
-          )
-        })
-      }
-    </div>
-  )
+  if (choice === 'people') {
+    return (
+      <div className="display">
+        {
+          people.map((person, i) => {
+            return <Card
+              key={i}
+              choice={choice}
+              {...person} />
+          })
+        }
+      </div>
+    )
+  } else if (choice === 'planets') {
+    return (
+      <div className="display">
+        {
+          planets.map((planet, i) => {
+            return <Card
+              key={i}
+              choice={choice}
+              {...planet} />
+          })
+        }
+      </div>
+    )
+  } else return <div></div>
+  
 }
 
 export default Display;
