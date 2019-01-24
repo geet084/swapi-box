@@ -10,7 +10,9 @@ export default class App extends Component {
     super();
     this.state = {
       movie: {},
-      people: []
+      activeChoice: '',
+      people: [],
+      planets: []
     }
   }
 
@@ -41,7 +43,8 @@ export default class App extends Component {
       .then(peopleSpecies => this.fetchSpeciesInfo(peopleSpecies))
       .then(newPeople => {
         return this.setState({
-          people: [...people, ...newPeople]
+          people: [...people, ...newPeople],
+          activeChoice: 'people'
         })
       })
     }
@@ -73,17 +76,40 @@ export default class App extends Component {
 
   }
 
+  fetchPlanets = () => {
+    // let { planets } = this.state;
+    //LENGTH IS 61
+    const url = 'https://swapi.co/api/planets/'
+
+    fetch(url)
+      .then(response => response.json())
+      .then(planetList => planetList.results)
+      .then(planets => this.setState({ planets, activeChoice: 'planets' }))
+
+  }
+
+  fetchVehicles = () => {
+    console.log('vehicles')
+  }
+
   render() {
-    let { movie, people } = this.state;
+    let { movie, activeChoice } = this.state;
 
     if (movie !== {}) {
       return (
         <main className="App">
           <ScrollBox movie={movie.opening_crawl} />
-          <p>{movie.title}</p>
-          <Favorites />
-          <Nav showMore={this.fetchPeople} />
-          <Display people={people} />
+          <p className="text">{movie.title}</p>
+          <nav className="navigation">
+            <Favorites />
+            <Nav
+              showPeople={this.fetchPeople}
+              showPlanets={this.fetchPlanets}
+              showVehicles={this.fetchVehicles}
+            />
+          </nav>
+          <h4 className="text">DISPLAY AREA</h4>
+          <Display choice={activeChoice} {...this.state} />
         </main>
       );
     } else {
