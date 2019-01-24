@@ -3,36 +3,22 @@ import Card from '../Card/Card'
 import './Display.scss'
 
 const Display = (props) => {
-  let { choice, people, planets } = props;
+  let { choice } = props;
   
-  if (choice === 'people') {
+  if (choice !== '') {
     return (
       <div className="display">
         {
-          people.map((person, i) => {
+          props[choice].map((selection, i) => {
             return <Card
               key={i}
               choice={choice}
-              {...person} />
-          })
-        }
-      </div>
-    )
-  } else if (choice === 'planets') {
-    return (
-      <div className="display">
-        {
-          planets.map((planet, i) => {
-            return <Card
-              key={i}
-              choice={choice}
-              {...planet} />
+              {...selection} />
           })
         }
       </div>
     )
   } else return <div></div>
-  
 }
 
 export default Display;
