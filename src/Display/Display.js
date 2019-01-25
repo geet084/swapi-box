@@ -4,18 +4,15 @@ import './Display.scss'
 
 const Display = (props) => {
   let { choice } = props;
-  // console.log(props)
+  
   if (choice !== '') {
+    let cards = props[choice].map((selection, i) => {
+      return <Card key={i} choice={choice} {...selection} />
+    })
+
     return (
       <div className="display">
-        {
-          props[choice].map((selection, i) => {
-            return <Card
-              key={i}
-              choice={choice}
-              {...selection} />
-          })
-        }
+        {cards}
       </div>
     )
   } else return (
