@@ -9,6 +9,7 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
+      url: 'https://swapi.co/api/',
       movie: {},
       activeChoice: '',
       people: [],
@@ -31,87 +32,78 @@ export default class App extends Component {
       .then(movie => this.setState({ movie }))
   }
 
-  fetchPeople = () => {
-    let { people } = this.state;
-    let pageNum = (people.length % 9) + 1;
-    if (people.length < 87) {
-      const url = 'https://swapi.co/api/people/?page='
-    
-      fetch(url + pageNum)
-      .then(response => response.json())
-      .then(peopleList => peopleList.results)
-      .then(peopleWorlds => this.fetchWorldInfo(peopleWorlds))
-      .then(peopleSpecies => this.fetchSpeciesInfo(peopleSpecies))
-      .then(newPeople => {
-        return this.setState({
-          people: [...people, ...newPeople],
-          activeChoice: 'people'
-        })
+  getMoreInfo = async () => {
+    let { activeChoice, people, planets } = this.state
+
+    if (activeChoice === 'people') {
+      let worldInfo = await this.fetchWorldInfo();
+      let speciesInfo = await this.fetchSpeciesInfo();
+      let updatedPeople = people.map((person, i) => {
+        return { ...person, ...worldInfo[i], ...speciesInfo[i] }
       })
+      this.setState({ people: updatedPeople })
+    }
+    if (activeChoice === 'planets') {
+      let residentInfo = await this.fetchResidentsInfo();
+      let updatedPlanets = planets.map((planet, i) => {
+        return { ...planet, ...residentInfo[i]}
+      })
+      this.setState({ planets: updatedPlanets })
     }
   }
 
-  fetchSpeciesInfo = (peeps) => {
-    let updatedSpecies = peeps.map(peep => {
-      if (peep.species.length === 0) {
-        return ({ ...peep, spec: 'unknown' })
-      } else {
-        return fetch(peep.species)
-          .then(response => response.json())
-          .then(spec => ({ ...peep, spec: spec.name }))
-      }
+  fetchSpeciesInfo = async () => {
+    let updatedPeople = this.state.people.map(async person => {
+      let response = await fetch(person.species)
+      let species = await response.json()
+
+      return ({spec: species.name})
     })
-    return Promise.all(updatedSpecies);
+    return await Promise.all(updatedPeople)
   }
 
-  fetchWorldInfo = (people) => {
-   let updatedPeople = people.map(person => {
-      return fetch(person.homeworld)
-        .then(response => response.json())
-        .then(world => {
-          let { name, population } = world;
-          return ({...person, world: name, population})
-        })
-   })
-    return Promise.all(updatedPeople);
+  fetchWorldInfo = async () => {
+    let updatedPeople = this.state.people.map(async person => { 
+      let response = await fetch(person.homeworld)
+      let world = await response.json()
+      let { name, population } = world;
 
+      return ({world: name, population })
+    })
+    return await Promise.all(updatedPeople)
   }
 
-  fetchPlanets = () => {
-    // let { planets } = this.state;
-    //LENGTH IS 61
-    const url = 'https://swapi.co/api/planets/'
+  fetchResidentsInfo = async () => {
+    let updatedPlanets = this.state.planets.map(async planet => {
+      let residents = planet.residents.map(async resident => {
+        let response = await fetch(resident)
+        let person = await response.json()
+        
+        return await person.name
+      })
 
-    fetch(url)
-      .then(response => response.json())
-      .then(planetList => planetList.results)
-      // .then(planetRes => this.fetchResidents(planetRes))
-      .then(planets => this.setState({ planets, activeChoice: 'planets' }))
-
+      let inhabitants = await Promise.all(residents)
+      return ({ inhabitants })
+    })
+    return Promise.all(updatedPlanets)
   }
 
-  // fetchResidents = (planets) => {
-  //   let updatedPlanets = planets.map(planet => {
-  //     let peeps = planet.residents.map(resident => {
-  //       let thing = fetch(resident)
-  //         .then(response => response.json())
-  //         .then(res => ({ name: res.name }))
-  //       return thing;
-  //     })
-  //     // planet.inhabitants = Promise.all(peeps)
-  //     // console.log('dddddddd', planet)
-  //     return planet
-  //   })
-  //   return updatedPlanets;
-  // }
+  fetchApiInfo = async (e) => {
+    let selection = e.target.name
 
-  fetchVehicles = () => {
-    const url = 'https://swapi.co/api/vehicles/'
+    let response = await fetch(this.state.url + selection)
+    let list = await response.json()
+    let result = await list.results
 
-    fetch(url)
-      .then(response => response.json())
-      .then(vehicleList => vehicleList.results)
-      .then(vehicles => this.setState({ vehicles, activeChoice: 'vehicles'}))
+    this.setState({
+      [selection]: result,
+      activeChoice: selection
+    })
+    await this.getMoreInfo()
+  }
+
+  showFavorites = () => {
+    console.log('faves')
   }
 
   render() {
@@ -120,22 +112,17 @@ export default class App extends Component {
     if (movie !== {}) {
       return (
         <main className="App">
-          <ScrollBox movie={movie.opening_crawl} />
+          <ScrollBox crawlText={movie.opening_crawl} />
           <p className="text">{movie.title}</p>
           <nav className="navigation">
-            <Favorites />
-            <Nav
-              showPeople={this.fetchPeople}
-              showPlanets={this.fetchPlanets}
-              showVehicles={this.fetchVehicles}
-            />
+            <Favorites showFavorites={this.showFavorites}/>
+            <Nav fetchInfo={this.fetchApiInfo} />
           </nav>
-          <h4 className="text">DISPLAY AREA</h4>
           <Display choice={activeChoice} {...this.state} />
         </main>
       );
     } else {
-      return <div>nothing to show</div>
+      return <div>Oops, something went wrong!</div>
     }
   }
 }

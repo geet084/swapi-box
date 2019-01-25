@@ -2,7 +2,7 @@ import React from 'react'
 import './Card.scss'
 
 const Card = (props) => {
-
+  
   if (props.choice === 'people') {
     return (
       <div className="card">
@@ -19,10 +19,10 @@ const Card = (props) => {
         <p>Terrain: {props.terrain}</p>
         <p>Population: {props.population}</p>
         <p>Climate: {props.climate}</p>
-        <p>Residents: ?????</p>
+        <p>Residents: {props.inhabitants}</p>
       </div>
     )
-  } else if (props.choice === 'vehicles') {
+  } else {
     return (
       <div className="card">
         <p>Name: {props.name}</p>
