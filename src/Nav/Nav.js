@@ -2,17 +2,17 @@ import React from 'react'
 import './Nav.scss'
 
 const Nav = (props) => {
-  let { showPeople, showPlanets, showVehicles } = props;
+  let { fetchInfo } = props;
   return (
     <div className="nav">
       <button
-        onClick={showPeople}>PEOPLE
+        onClick={fetchInfo} name="people">PEOPLE
       </button>
       <button
-        onClick={showPlanets}>PLANETS
+        onClick={fetchInfo} name="planets">PLANETS
       </button>
       <button
-        onClick={showVehicles}>VEHICLES
+        onClick={fetchInfo} name="vehicles">VEHICLES
       </button>
     </div>
   )
