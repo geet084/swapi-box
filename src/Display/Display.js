@@ -18,7 +18,11 @@ const Display = (props) => {
         }
       </div>
     )
-  } else return <div></div>
+  } else return (
+    <div className="select-category">
+      <span>select a category</span>
+    </div>
+  )
 }
 
 export default Display;
