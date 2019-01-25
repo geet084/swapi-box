@@ -6,13 +6,19 @@ const Nav = (props) => {
   return (
     <div className="nav">
       <button
-        onClick={fetchInfo} name="people">PEOPLE
+        onClick={fetchInfo}
+        className="people"
+        name="people">PEOPLE
       </button>
       <button
-        onClick={fetchInfo} name="planets">PLANETS
+        onClick={fetchInfo}
+        className="planets"
+        name="planets">PLANETS
       </button>
       <button
-        onClick={fetchInfo} name="vehicles">VEHICLES
+        onClick={fetchInfo}
+        className="vehicles"
+        name="vehicles">VEHICLES
       </button>
     </div>
   )
