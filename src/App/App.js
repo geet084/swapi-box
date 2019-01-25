@@ -25,11 +25,22 @@ export default class App extends Component {
     return movies[randomNumber];
   }
 
-  componentDidMount = () => {
-    fetch('https://swapi.co/api/films/')
-      .then(response => response.json())
-      .then(movies => this.findRandomMovie(movies.results))
-      .then(movie => this.setState({ movie }))
+  componentDidMount = async () => {
+    let { url } = this.state
+    let movies = await this.fetchApiInfo(url + 'films/')
+    let movie = this.findRandomMovie(movies.results)
+    this.setState({ movie })
+  }
+
+  getInfo = async (e) => {
+    let selection = e.target.name
+    let { url } = this.state
+    let data = await this.fetchApiInfo(url + selection)
+    
+    this.setState({
+      [selection]: data.results,
+      activeChoice: selection
+    }, this.getMoreInfo)
   }
 
   getMoreInfo = async () => {
@@ -54,8 +65,7 @@ export default class App extends Component {
 
   fetchSpeciesInfo = async () => {
     let updatedPeople = this.state.people.map(async person => {
-      let response = await fetch(person.species)
-      let species = await response.json()
+      let species = await this.fetchApiInfo(person.species)
 
       return ({spec: species.name})
     })
@@ -64,11 +74,9 @@ export default class App extends Component {
 
   fetchWorldInfo = async () => {
     let updatedPeople = this.state.people.map(async person => { 
-      let response = await fetch(person.homeworld)
-      let world = await response.json()
-      let { name, population } = world;
-
-      return ({world: name, population })
+      let world = await this.fetchApiInfo(person.homeworld)
+      
+      return ({world: world.name, population: world.population })
     })
     return await Promise.all(updatedPeople)
   }
@@ -76,30 +84,19 @@ export default class App extends Component {
   fetchResidentsInfo = async () => {
     let updatedPlanets = this.state.planets.map(async planet => {
       let residents = planet.residents.map(async resident => {
-        let response = await fetch(resident)
-        let person = await response.json()
+        let person = await this.fetchApiInfo(resident)
         
-        return await person.name
+        return person.name
       })
-
       let inhabitants = await Promise.all(residents)
       return ({ inhabitants })
     })
     return Promise.all(updatedPlanets)
   }
 
-  fetchApiInfo = async (e) => {
-    let selection = e.target.name
-
-    let response = await fetch(this.state.url + selection)
-    let list = await response.json()
-    let result = await list.results
-
-    this.setState({
-      [selection]: result,
-      activeChoice: selection
-    })
-    await this.getMoreInfo()
+  fetchApiInfo = async (url) => {
+    let response = await fetch(url)
+    return await response.json()
   }
 
   showFavorites = () => {
@@ -116,7 +113,7 @@ export default class App extends Component {
           <p className="text">{movie.title}</p>
           <nav className="navigation">
             <Favorites showFavorites={this.showFavorites}/>
-            <Nav fetchInfo={this.fetchApiInfo} />
+            <Nav getInfo={this.getInfo} />
           </nav>
           <Display choice={activeChoice} {...this.state} />
         </main>

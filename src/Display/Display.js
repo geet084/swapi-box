@@ -4,7 +4,7 @@ import './Display.scss'
 
 const Display = (props) => {
   let { choice } = props;
-  
+  // console.log(props)
   if (choice !== '') {
     return (
       <div className="display">
