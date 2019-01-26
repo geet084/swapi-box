@@ -10,12 +10,25 @@ const Nav = ({ choice, getInfo }) => {
 
   let icons = iconList.map((icon, i) => {
     let selectedIcon = choice === icon
-    let curURL = baseURL + iconURL[i]
 
     if (selectedIcon) {
-      return <Icon key={i} url={curURL} choice={icon} getInfo={getInfo} classes={'active'} />
+      return (
+        <Icon key={i}
+          url={baseURL + iconURL[i]}
+          choice={icon}
+          getInfo={getInfo}
+          classes={'active'}
+        />
+      )
     } else {
-      return <Icon key={i} url={curURL} choice={icon} getInfo={getInfo} classes={'inactive'} />
+      return (
+        <Icon key={i}
+          url={baseURL + iconURL[i]}
+          choice={icon}
+          getInfo={getInfo}
+          classes={'inactive'}
+        />
+      )
     }
   })
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Icon.scss'
 
-const Icon = ({url, choice, classes, getInfo}) => {
+const Icon = ({url, choice, classes, getInfo, optText}) => {
   
   return (
     <div className="section">
@@ -12,7 +12,7 @@ const Icon = ({url, choice, classes, getInfo}) => {
         className={classes}
         name={choice}
       />
-    <span className="tag">{choice}</span>
+      <span className="tag">{optText}{choice}</span>
     </div>
   )
 }
