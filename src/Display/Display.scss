@@ -9,7 +9,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15%;
+  margin-top: 20px;
   font-size: 3rem;
   color: white;
+  height: 450px;
+}
+
+.select {
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 270px;
+  margin: 0 20px 100px 0;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+}
+
+.category {
+  background-image: url('../images/splash.jpg');
+  width: 500px;
+  height: 450px;
+  background-position-x: -190px;
+  background-position-y: -45px;
+  background-size: 145% auto;
 }

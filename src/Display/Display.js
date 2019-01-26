@@ -5,7 +5,7 @@ import './Display.scss'
 const Display = (props) => {
   let { choice } = props;
   
-  if (choice !== '') {
+  if (choice !== '' && choice !== 'faves') {
     let cards = props[choice].map((selection, i) => {
       return <Card key={i} choice={choice} {...selection} />
     })
@@ -15,11 +15,18 @@ const Display = (props) => {
         {cards}
       </div>
     )
-  } else return (
+  } else if (choice === 'faves') { 
+    return (<div></div>)
+
+  } else {
+    return (
     <div className="select-category">
-      <span>select a category</span>
+      <span className="select">SELECT A CATEGORY</span>
+      <span className="category"></span>
     </div>
-  )
+    )
+  }
+
 }
 
 export default Display;
