@@ -3,11 +3,11 @@ import Card from '../Card/Card'
 import './Display.scss'
 
 const Display = (props) => {
-  let { choice } = props;
+  let { choice, selection } = props;
   
   if (choice !== '' && choice !== 'faves') {
-    let cards = props[choice].map((selection, i) => {
-      return <Card key={i} choice={choice} {...selection} />
+    let cards = selection.map((selected, i) => {
+      return <Card key={i} choice={choice} {...selected} />
     })
 
     return (
