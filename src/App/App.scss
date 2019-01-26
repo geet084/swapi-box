@@ -1,13 +1,17 @@
 .navigation {
   display: flex;
   justify-content: space-around;
-  background-color: #aba123;
+  height: 125px;
+  background-image: url('../images/saber.jpg');
+  background-size: 100vw auto;
+  background-position-y: center; 
 }
 
 body {
-  background-color: #000;
+  background-image: url('../images/sw-bg.png')
 }
 
 .text {
   color: white;
+  margin: 0;
 }
