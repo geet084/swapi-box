@@ -14,7 +14,8 @@ export default class App extends Component {
       activeChoice: '',
       people: [],
       planets: [],
-      vehicles: []
+      vehicles: [],
+      favorites: []
     }
   }
 
@@ -99,23 +100,39 @@ export default class App extends Component {
     return await response.json()
   }
 
-  showFavorites = () => {
-    console.log('faves')
+  showFavorites = (e) => {
+    let selection = e.target.name
+    console.log(selection)
+    this.setState({ activeChoice: selection })
   }
 
   render() {
-    let { movie, activeChoice } = this.state;
+    let { movie, activeChoice, favorites } = this.state;
 
     if (movie !== {}) {
       return (
         <main className="App">
-          <ScrollBox crawlText={movie.opening_crawl} />
-          <p className="text">{movie.title}</p>
+          <ScrollBox
+            crawlText={movie.opening_crawl}
+            title={movie.title}
+            date={movie.release_date}
+          />
           <nav className="navigation">
-            <Favorites showFavorites={this.showFavorites}/>
-            <Nav getInfo={this.getInfo} />
+            <Favorites
+              showFavorites={this.showFavorites}
+              active={activeChoice}
+              numFaves={favorites.length}
+              newScroll={this.componentDidMount}
+            />
+            <Nav
+              getInfo={this.getInfo}
+              choice={activeChoice}
+            />
           </nav>
-          <Display choice={activeChoice} {...this.state} />
+          <Display
+            choice={activeChoice}
+            {...this.state} 
+            />
         </main>
       );
     } else {
