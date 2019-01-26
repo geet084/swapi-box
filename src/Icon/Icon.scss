@@ -1,0 +1,41 @@
+input:focus {
+    outline:none;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  margin: 20px 0 -20px 8px;
+  color: white;
+}
+
+.active {
+  cursor: pointer;
+  background-color: yellow;
+  border-radius: 100px;
+  padding: 5px;
+  transition-duration: .3s;
+  &:hover {
+    cursor: pointer;
+    background-color: green;
+    border-radius: 100px;
+    padding: 5px;
+    transition-duration: 1.5s;
+    margin: -5px;
+  }
+}
+
+.inactive {
+  transition-duration: .1s;
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 100px;
+    padding: 5px;
+    transition-duration: .1s;
+    margin: -5px;
+  }
+}
