@@ -4,13 +4,14 @@ import ScrollBox from '../ScrollBox/ScrollBox'
 import Favorites from '../Favorites/Favorites'
 import Nav from '../Nav/Nav'
 import Display from '../Display/Display'
+import { fetchFilms, fetchSelection, fetchWorldInfo, fetchSpeciesInfo, fetchResidentInfo } from '../api'
+
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      url: 'https://swapi.co/api/',
-      movie: {},
+      scrollMovie: {},
       activeChoice: '',
       people: [],
       planets: [],
@@ -27,96 +28,79 @@ export default class App extends Component {
   }
 
   componentDidMount = async () => {
-    let { url } = this.state
-    let movies = await this.fetchApiInfo(url + 'films/')
-    let movie = this.findRandomMovie(movies.results)
-    this.setState({ movie })
+    let movies = await fetchFilms()
+    let scrollMovie = this.findRandomMovie(movies)
+    this.setState({ scrollMovie })
   }
 
   getInfo = async (e) => {
     let selection = e.target.name
-    let { url } = this.state
-    let data = await this.fetchApiInfo(url + selection)
-    
+    let data = await fetchSelection(selection)
+    let updatedChoice;
+
+    if (selection === 'people') {
+      updatedChoice = await this.getPeopleInfo(data.results);
+    } else if (selection === 'planets') {
+      updatedChoice = await this.getPlanetInfo(data.results);
+    } else {
+      updatedChoice = this.getVehicleInfo(data.results);
+    }
+
     this.setState({
-      [selection]: data.results,
+      [selection]: updatedChoice,
       activeChoice: selection
-    }, this.getMoreInfo)
-  }
-
-  getMoreInfo = async () => {
-    let { activeChoice, people, planets } = this.state
-
-    if (activeChoice === 'people') {
-      let worldInfo = await this.fetchWorldInfo();
-      let speciesInfo = await this.fetchSpeciesInfo();
-      let updatedPeople = people.map((person, i) => {
-        return { ...person, ...worldInfo[i], ...speciesInfo[i] }
-      })
-      this.setState({ people: updatedPeople })
-    }
-    if (activeChoice === 'planets') {
-      let residentInfo = await this.fetchResidentsInfo();
-      let updatedPlanets = planets.map((planet, i) => {
-        return { ...planet, ...residentInfo[i]}
-      })
-      this.setState({ planets: updatedPlanets })
-    }
-  }
-
-  fetchSpeciesInfo = async () => {
-    let updatedPeople = this.state.people.map(async person => {
-      let species = await this.fetchApiInfo(person.species)
-
-      return ({spec: species.name})
     })
-    return await Promise.all(updatedPeople)
   }
 
-  fetchWorldInfo = async () => {
-    let updatedPeople = this.state.people.map(async person => { 
-      let world = await this.fetchApiInfo(person.homeworld)
-      
-      return ({world: world.name, population: world.population })
+  async getPeopleInfo(people) {
+    let updatedPeople = people.map(async (person) => {
+      let worldInfo = await fetchWorldInfo(person.homeworld);
+      let speciesInfo = await fetchSpeciesInfo(person.species);
+
+      return await {
+        name: person.name,
+        homeworld: person.homeworld,
+        population: person.population,
+        species: person.species,
+        ...worldInfo,
+        ...speciesInfo
+      };
+    });
+    return await Promise.all(updatedPeople);
+  }
+
+  async getPlanetInfo(planets) {
+    let updatedPlanets = planets.map(async (planet) => {
+      let planetInfo = await fetchResidentInfo(planet.residents);
+      return await {
+        name: planet.name,
+        terrain: planet.terrain,
+        population: planet.population,
+        climate: planet.climate,
+        residents: planetInfo.residents
+      };
+    });
+    return await Promise.all(updatedPlanets);
+  }
+
+  getVehicleInfo = (vehicles) => {
+    return vehicles.map(vehicle => {
+      return {
+        name: vehicle.name,
+        model: vehicle.model,
+        vehicle_class: vehicle.vehicle_class,
+        passengers: vehicle.passengers
+      }
     })
-    return await Promise.all(updatedPeople)
-  }
-
-  fetchResidentsInfo = async () => {
-    let updatedPlanets = this.state.planets.map(async planet => {
-      let residents = planet.residents.map(async resident => {
-        let person = await this.fetchApiInfo(resident)
-        
-        return person.name
-      })
-      let inhabitants = await Promise.all(residents)
-      return ({ inhabitants })
-    })
-    return Promise.all(updatedPlanets)
-  }
-
-  fetchApiInfo = async (url) => {
-    let response = await fetch(url)
-    return await response.json()
-  }
-
-  showFavorites = (e) => {
-    let selection = e.target.name
-    console.log(selection)
-    this.setState({ activeChoice: selection })
   }
 
   render() {
-    let { movie, activeChoice, favorites } = this.state;
-
-    if (movie !== {}) {
+    let { scrollMovie, activeChoice, favorites } = this.state;
+  
+    if (scrollMovie !== {}) {
       return (
         <main className="App">
-          <ScrollBox
-            crawlText={movie.opening_crawl}
-            title={movie.title}
-            date={movie.release_date}
-          />
+          <ScrollBox {...scrollMovie} />
           <nav className="navigation">
             <Favorites
               showFavorites={this.showFavorites}
@@ -131,7 +115,7 @@ export default class App extends Component {
           </nav>
           <Display
             choice={activeChoice}
-            {...this.state} 
+            selection={this.state[activeChoice]} 
             />
         </main>
       );
