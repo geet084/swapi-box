@@ -2,10 +2,13 @@ import React from 'react'
 import './Card.scss'
 
 const Card = (props) => {
+
+  const classes = `card ${props.choice}-bg`
   
   if (props.choice === 'people') {
     return (
-      <div className="card">
+      <div className={classes}>
+        <span className="fave-icon">fave</span>
         <p>Name: {props.name}</p>
         <p>HomeWorld: {props.world}</p>
         <p>Population: {props.population}</p>
@@ -14,7 +17,8 @@ const Card = (props) => {
     )
   } else if (props.choice === 'planets') {
     return (
-      <div className="card">
+      <div className={classes}>
+        <span className="fave-icon">fave</span>
         <p>Name: {props.name}</p>
         <p>Terrain: {props.terrain}</p>
         <p>Population: {props.population}</p>
@@ -24,7 +28,8 @@ const Card = (props) => {
     )
   } else {
     return (
-      <div className="card">
+      <div className={classes}>
+        <span className="fave-icon">fave</span>
         <p>Name: {props.name}</p>
         <p>Model: {props.model}</p>
         <p>Class: {props.vehicle_class}</p>

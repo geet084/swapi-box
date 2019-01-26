@@ -1,4 +1,5 @@
 .card {
+  transition-duration: 2s;
   background-color: #272323;
   width: 225px;
   color: white;
@@ -6,6 +7,34 @@
   flex-direction: column;
   padding-left: 10px;
   justify-content: center;
-  border: 2px solid #8e8e8e;
+  border: 2px solid yellow;
   margin: 10px 0px;
+  box-shadow: inset 0px 0px 15px 0px rgba(255,255,255,0.75), 
+                     0px 0px 5px 5px rgba(255,255,255,0.75);
+}
+
+.fave-icon {
+  position: relative;
+  top: 28px;
+  left: 180px;
+  margin: -6px 0;
+}
+
+
+
+.people-bg {
+  background-image: url('../images/people-bg.jpg');
+  background-size: 233px 200px
+}
+
+.planets-bg {
+  background-image: url('../images/planet-bg.jpg');
+    background-position-y: 25px;
+    background-size: 250px 265px;
+}
+
+.vehicles-bg {
+  background-image: url('../images/vehicle-bg.jpg');
+  background-position-y: 45px;
+  background-size: 265px 220px;
 }
