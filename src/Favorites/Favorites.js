@@ -28,7 +28,7 @@ const Favorites = ({showFavorites, active, numFaves, newScroll}) => {
 }
 
 Favorites.propTypes = {
-  showFavorites: PropTypes.array,
+  showFavorites: PropTypes.func,
   active: PropTypes.string,
   numFaves: PropTypes.number,
   newScroll: PropTypes.func
