@@ -20,26 +20,28 @@ export default class App extends Component {
     }
   }
 
-  findRandomMovie = (movies) => {
-    let maxNum = Math.floor(movies.length);
-    let randomNumber = Math.floor(Math.random() * maxNum)
-
-    return movies[randomNumber];
+  componentDidMount = () => {
+    this.getScrollMovie();
   }
 
-  componentDidMount = async () => {
-    let movies = await fetchFilms()
-    let scrollMovie = this.findRandomMovie(movies)
-    this.setState({ scrollMovie })
+  async getScrollMovie() {
+    let movies = await fetchFilms();
+
+    let maxNum = Math.floor(movies.length);
+    let randomNumber = Math.floor(Math.random() * maxNum)
+    let scrollMovie = movies[randomNumber];
+
+    this.setState({ scrollMovie });
   }
 
   getInfo = async (e) => {
     let selection = e.target.name
     let data = await fetchSelection(selection)
     let updatedChoice;
-
+    console.log(data)
     if (selection === 'people') {
       updatedChoice = await this.getPeopleInfo(data.results);
+      console.log(updatedChoice)
     } else if (selection === 'planets') {
       updatedChoice = await this.getPlanetInfo(data.results);
     } else {
@@ -51,6 +53,7 @@ export default class App extends Component {
       activeChoice: selection
     })
   }
+
 
   async getPeopleInfo(people) {
     let updatedPeople = people.map(async (person) => {

@@ -21,6 +21,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <span
+          className="fave-icon"
+        >
+          fave
+        </span>,
         <p>
           Name: 
           hello
@@ -35,10 +40,22 @@ ShallowWrapper {
           Species: 
         </p>,
       ],
-      "className": "card",
+      "className": "card people-bg",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "fave",
+          "className": "fave-icon",
+        },
+        "ref": null,
+        "rendered": "fave",
+        "type": "span",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -117,6 +134,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <span
+            className="fave-icon"
+          >
+            fave
+          </span>,
           <p>
             Name: 
             hello
@@ -131,10 +153,22 @@ ShallowWrapper {
             Species: 
           </p>,
         ],
-        "className": "card",
+        "className": "card people-bg",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "fave",
+            "className": "fave-icon",
+          },
+          "ref": null,
+          "rendered": "fave",
+          "type": "span",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -248,6 +282,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <span
+          className="fave-icon"
+        >
+          fave
+        </span>,
         <p>
           Name: 
           hello
@@ -265,10 +304,22 @@ ShallowWrapper {
           Residents: 
         </p>,
       ],
-      "className": "card",
+      "className": "card planets-bg",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "fave",
+          "className": "fave-icon",
+        },
+        "ref": null,
+        "rendered": "fave",
+        "type": "span",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -364,6 +415,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <span
+            className="fave-icon"
+          >
+            fave
+          </span>,
           <p>
             Name: 
             hello
@@ -381,10 +437,22 @@ ShallowWrapper {
             Residents: 
           </p>,
         ],
-        "className": "card",
+        "className": "card planets-bg",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "fave",
+            "className": "fave-icon",
+          },
+          "ref": null,
+          "rendered": "fave",
+          "type": "span",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -515,6 +583,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <span
+          className="fave-icon"
+        >
+          fave
+        </span>,
         <p>
           Name: 
           hello
@@ -529,10 +602,22 @@ ShallowWrapper {
           Passengers: 
         </p>,
       ],
-      "className": "card",
+      "className": "card vehicles-bg",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "fave",
+          "className": "fave-icon",
+        },
+        "ref": null,
+        "rendered": "fave",
+        "type": "span",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -611,6 +696,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <span
+            className="fave-icon"
+          >
+            fave
+          </span>,
           <p>
             Name: 
             hello
@@ -625,10 +715,22 @@ ShallowWrapper {
             Passengers: 
           </p>,
         ],
-        "className": "card",
+        "className": "card vehicles-bg",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "fave",
+            "className": "fave-icon",
+          },
+          "ref": null,
+          "rendered": "fave",
+          "type": "span",
+        },
         Object {
           "instance": null,
           "key": undefined,

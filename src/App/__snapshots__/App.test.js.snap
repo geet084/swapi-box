@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should have sad path snapshot 1`] = `
+exports[`App should display oops when movie is not fetched 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App />,
@@ -19,27 +19,21 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <scrollBox />,
-        <p
-          className="text"
-        />,
         <nav
           className="navigation"
         >
           <Favorites
-            showFavorites={[Function]}
+            active=""
+            newScroll={[Function]}
+            numFaves={0}
           />
           <Nav
-            fetchInfo={[Function]}
+            choice=""
+            getInfo={[Function]}
           />
         </nav>,
         <Display
-          activeChoice=""
           choice=""
-          movie={Object {}}
-          people={Array []}
-          planets={Array []}
-          url="https://swapi.co/api/"
-          vehicles={Array []}
         />,
       ],
       "className": "App",
@@ -50,9 +44,7 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {
-          "crawlText": undefined,
-        },
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -62,24 +54,15 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
-          "className": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
             <Favorites
-              showFavorites={[Function]}
+              active=""
+              newScroll={[Function]}
+              numFaves={0}
             />,
             <Nav
-              fetchInfo={[Function]}
+              choice=""
+              getInfo={[Function]}
             />,
           ],
           "className": "navigation",
@@ -91,7 +74,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "showFavorites": [Function],
+              "active": "",
+              "newScroll": [Function],
+              "numFaves": 0,
+              "showFavorites": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -102,7 +88,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "fetchInfo": [Function],
+              "choice": "",
+              "getInfo": [Function],
             },
             "ref": null,
             "rendered": null,
@@ -116,13 +103,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "activeChoice": "",
           "choice": "",
-          "movie": Object {},
-          "people": Array [],
-          "planets": Array [],
-          "url": "https://swapi.co/api/",
-          "vehicles": Array [],
+          "selection": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -139,27 +121,21 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <scrollBox />,
-          <p
-            className="text"
-          />,
           <nav
             className="navigation"
           >
             <Favorites
-              showFavorites={[Function]}
+              active=""
+              newScroll={[Function]}
+              numFaves={0}
             />
             <Nav
-              fetchInfo={[Function]}
+              choice=""
+              getInfo={[Function]}
             />
           </nav>,
           <Display
-            activeChoice=""
             choice=""
-            movie={Object {}}
-            people={Array []}
-            planets={Array []}
-            url="https://swapi.co/api/"
-            vehicles={Array []}
           />,
         ],
         "className": "App",
@@ -170,9 +146,7 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {
-            "crawlText": undefined,
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -182,24 +156,15 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
-            "className": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
               <Favorites
-                showFavorites={[Function]}
+                active=""
+                newScroll={[Function]}
+                numFaves={0}
               />,
               <Nav
-                fetchInfo={[Function]}
+                choice=""
+                getInfo={[Function]}
               />,
             ],
             "className": "navigation",
@@ -211,7 +176,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "showFavorites": [Function],
+                "active": "",
+                "newScroll": [Function],
+                "numFaves": 0,
+                "showFavorites": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -222,7 +190,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "fetchInfo": [Function],
+                "choice": "",
+                "getInfo": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -236,13 +205,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "activeChoice": "",
             "choice": "",
-            "movie": Object {},
-            "people": Array [],
-            "planets": Array [],
-            "url": "https://swapi.co/api/",
-            "vehicles": Array [],
+            "selection": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -290,28 +254,24 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <scrollBox />,
-        <p
-          className="text"
+        <scrollBox
+          title="not empty"
         />,
         <nav
           className="navigation"
         >
           <Favorites
-            showFavorites={[Function]}
+            active=""
+            newScroll={[Function]}
+            numFaves={0}
           />
           <Nav
+            choice=""
             getInfo={[Function]}
           />
         </nav>,
         <Display
-          activeChoice=""
           choice=""
-          movie={Object {}}
-          people={Array []}
-          planets={Array []}
-          url="https://swapi.co/api/"
-          vehicles={Array []}
         />,
       ],
       "className": "App",
@@ -323,7 +283,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "crawlText": undefined,
+          "title": "not empty",
         },
         "ref": null,
         "rendered": null,
@@ -334,23 +294,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
-          "className": "text",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
           "children": Array [
             <Favorites
-              showFavorites={[Function]}
+              active=""
+              newScroll={[Function]}
+              numFaves={0}
             />,
             <Nav
+              choice=""
               getInfo={[Function]}
             />,
           ],
@@ -363,7 +314,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "showFavorites": [Function],
+              "active": "",
+              "newScroll": [Function],
+              "numFaves": 0,
+              "showFavorites": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -374,6 +328,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "choice": "",
               "getInfo": [Function],
             },
             "ref": null,
@@ -388,13 +343,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "activeChoice": "",
           "choice": "",
-          "movie": Object {},
-          "people": Array [],
-          "planets": Array [],
-          "url": "https://swapi.co/api/",
-          "vehicles": Array [],
+          "selection": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -410,28 +360,24 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <scrollBox />,
-          <p
-            className="text"
+          <scrollBox
+            title="not empty"
           />,
           <nav
             className="navigation"
           >
             <Favorites
-              showFavorites={[Function]}
+              active=""
+              newScroll={[Function]}
+              numFaves={0}
             />
             <Nav
+              choice=""
               getInfo={[Function]}
             />
           </nav>,
           <Display
-            activeChoice=""
             choice=""
-            movie={Object {}}
-            people={Array []}
-            planets={Array []}
-            url="https://swapi.co/api/"
-            vehicles={Array []}
           />,
         ],
         "className": "App",
@@ -443,7 +389,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "crawlText": undefined,
+            "title": "not empty",
           },
           "ref": null,
           "rendered": null,
@@ -454,23 +400,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
-            "className": "text",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
             "children": Array [
               <Favorites
-                showFavorites={[Function]}
+                active=""
+                newScroll={[Function]}
+                numFaves={0}
               />,
               <Nav
+                choice=""
                 getInfo={[Function]}
               />,
             ],
@@ -483,7 +420,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "showFavorites": [Function],
+                "active": "",
+                "newScroll": [Function],
+                "numFaves": 0,
+                "showFavorites": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -494,6 +434,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "choice": "",
                 "getInfo": [Function],
               },
               "ref": null,
@@ -508,13 +449,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "activeChoice": "",
             "choice": "",
-            "movie": Object {},
-            "people": Array [],
-            "planets": Array [],
-            "url": "https://swapi.co/api/",
-            "vehicles": Array [],
+            "selection": undefined,
           },
           "ref": null,
           "rendered": null,
