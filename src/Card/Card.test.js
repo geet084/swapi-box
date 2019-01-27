@@ -17,7 +17,7 @@ describe('Card', () => {
 
   it('should properly render snapshot', () => {
     const mockChoice = 'planets';
-    const mockSelection = { name: 'hello' };
+    const mockSelection = { name: 'hello', residents: ['bob'] };
     wrapper = shallow(
       <Card choice={mockChoice} {...mockSelection} />
     )

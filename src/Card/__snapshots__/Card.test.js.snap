@@ -24,7 +24,9 @@ ShallowWrapper {
         <span
           className="fave-icon"
         >
-          fave
+          <i
+            className="fas fa-jedi"
+          />
         </span>,
         <p>
           Name: 
@@ -49,11 +51,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "fave",
+          "children": <i
+            className="fas fa-jedi"
+          />,
           "className": "fave-icon",
         },
         "ref": null,
-        "rendered": "fave",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fas fa-jedi",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
         "type": "span",
       },
       Object {
@@ -137,7 +151,9 @@ ShallowWrapper {
           <span
             className="fave-icon"
           >
-            fave
+            <i
+              className="fas fa-jedi"
+            />
           </span>,
           <p>
             Name: 
@@ -162,11 +178,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "fave",
+            "children": <i
+              className="fas fa-jedi"
+            />,
             "className": "fave-icon",
           },
           "ref": null,
-          "rendered": "fave",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-jedi",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
           "type": "span",
         },
         Object {
@@ -267,6 +295,11 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Card
     choice="planets"
     name="hello"
+    residents={
+      Array [
+        "bob",
+      ]
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -285,7 +318,9 @@ ShallowWrapper {
         <span
           className="fave-icon"
         >
-          fave
+          <i
+            className="fas fa-jedi"
+          />
         </span>,
         <p>
           Name: 
@@ -302,6 +337,7 @@ ShallowWrapper {
         </p>,
         <p>
           Residents: 
+          bob
         </p>,
       ],
       "className": "card planets-bg",
@@ -313,11 +349,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "fave",
+          "children": <i
+            className="fas fa-jedi"
+          />,
           "className": "fave-icon",
         },
         "ref": null,
-        "rendered": "fave",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fas fa-jedi",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
         "type": "span",
       },
       Object {
@@ -395,13 +443,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "Residents: ",
-            undefined,
+            Array [
+              "bob",
+            ],
           ],
         },
         "ref": null,
         "rendered": Array [
           "Residents: ",
-          undefined,
+          "bob",
         ],
         "type": "p",
       },
@@ -418,7 +468,9 @@ ShallowWrapper {
           <span
             className="fave-icon"
           >
-            fave
+            <i
+              className="fas fa-jedi"
+            />
           </span>,
           <p>
             Name: 
@@ -435,6 +487,7 @@ ShallowWrapper {
           </p>,
           <p>
             Residents: 
+            bob
           </p>,
         ],
         "className": "card planets-bg",
@@ -446,11 +499,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "fave",
+            "children": <i
+              className="fas fa-jedi"
+            />,
             "className": "fave-icon",
           },
           "ref": null,
-          "rendered": "fave",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-jedi",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
           "type": "span",
         },
         Object {
@@ -528,13 +593,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "Residents: ",
-              undefined,
+              Array [
+                "bob",
+              ],
             ],
           },
           "ref": null,
           "rendered": Array [
             "Residents: ",
-            undefined,
+            "bob",
           ],
           "type": "p",
         },
@@ -586,7 +653,9 @@ ShallowWrapper {
         <span
           className="fave-icon"
         >
-          fave
+          <i
+            className="fas fa-jedi"
+          />
         </span>,
         <p>
           Name: 
@@ -611,11 +680,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "fave",
+          "children": <i
+            className="fas fa-jedi"
+          />,
           "className": "fave-icon",
         },
         "ref": null,
-        "rendered": "fave",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fas fa-jedi",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "i",
+        },
         "type": "span",
       },
       Object {
@@ -699,7 +780,9 @@ ShallowWrapper {
           <span
             className="fave-icon"
           >
-            fave
+            <i
+              className="fas fa-jedi"
+            />
           </span>,
           <p>
             Name: 
@@ -724,11 +807,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "fave",
+            "children": <i
+              className="fas fa-jedi"
+            />,
             "className": "fave-icon",
           },
           "ref": null,
-          "rendered": "fave",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fas fa-jedi",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
           "type": "span",
         },
         Object {

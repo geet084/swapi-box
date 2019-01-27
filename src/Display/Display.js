@@ -7,6 +7,9 @@ const Display = ({ choice, selection }) => {
   
   if (choice !== '' && choice !== 'faves') {
     let cards = selection.map((selected, i) => {
+      if (selected.residents && selected.residents.length < 1) {
+        selected.residents = ['none']
+      }
       return <Card key={i} choice={choice} {...selected} />
     })
 
