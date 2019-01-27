@@ -20,13 +20,89 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "behavior": "scroll",
-      "children": "Some text to display here",
+      "children": <div>
+        <p>
+          Some text to display here
+        </p>
+        <p
+          className="title"
+        >
+          <span>
+                  
+          </span>
+        </p>
+      </div>,
       "className": "scroll",
       "direction": "up",
       "scrollamount": "1.5",
     },
     "ref": null,
-    "rendered": "Some text to display here",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p>
+            Some text to display here
+          </p>,
+          <p
+            className="title"
+          >
+            <span>
+                    
+            </span>
+          </p>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Some text to display here",
+          },
+          "ref": null,
+          "rendered": "Some text to display here",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <span>
+                    
+            </span>,
+            "className": "title",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                undefined,
+                "      ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+              "      ",
+              undefined,
+            ],
+            "type": "span",
+          },
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
     "type": "marquee",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -36,13 +112,89 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "behavior": "scroll",
-        "children": "Some text to display here",
+        "children": <div>
+          <p>
+            Some text to display here
+          </p>
+          <p
+            className="title"
+          >
+            <span>
+                    
+            </span>
+          </p>
+        </div>,
         "className": "scroll",
         "direction": "up",
         "scrollamount": "1.5",
       },
       "ref": null,
-      "rendered": "Some text to display here",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              Some text to display here
+            </p>,
+            <p
+              className="title"
+            >
+              <span>
+                      
+              </span>
+            </p>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Some text to display here",
+            },
+            "ref": null,
+            "rendered": "Some text to display here",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span>
+                      
+              </span>,
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  undefined,
+                  "      ",
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+                "      ",
+                undefined,
+              ],
+              "type": "span",
+            },
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
       "type": "marquee",
     },
   ],

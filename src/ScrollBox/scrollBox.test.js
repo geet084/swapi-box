@@ -17,8 +17,4 @@ describe('ScrollBox', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should receive correct props', () => {
-    expect(wrapper.props().children).toEqual(mockMovie)
-  })
-
 })
