@@ -16,9 +16,4 @@ describe('Nav', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should register a click on a button', () => {
-    wrapper.find('.people').simulate('click')
-    expect(mockFetchInfo).toHaveBeenCalled()
-  })
-
 })

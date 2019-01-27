@@ -20,27 +20,21 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <button
-          className="people"
-          name="people"
-          onClick={[MockFunction]}
-        >
-          PEOPLE
-        </button>,
-        <button
-          className="planets"
-          name="planets"
-          onClick={[MockFunction]}
-        >
-          PLANETS
-        </button>,
-        <button
-          className="vehicles"
-          name="vehicles"
-          onClick={[MockFunction]}
-        >
-          VEHICLES
-        </button>,
+        <Icon
+          choice="people"
+          classes="inactive"
+          url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Leia-icon.png"
+        />,
+        <Icon
+          choice="planets"
+          classes="inactive"
+          url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Death-Star-icon.png"
+        />,
+        <Icon
+          choice="vehicles"
+          classes="inactive"
+          url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Millennium-Falcon-icon.png"
+        />,
       ],
       "className": "nav",
     },
@@ -48,45 +42,45 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "host",
+        "key": "0",
+        "nodeType": "function",
         "props": Object {
-          "children": "PEOPLE",
-          "className": "people",
-          "name": "people",
-          "onClick": [MockFunction],
+          "choice": "people",
+          "classes": "inactive",
+          "getInfo": undefined,
+          "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Leia-icon.png",
         },
         "ref": null,
-        "rendered": "PEOPLE",
-        "type": "button",
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "host",
+        "key": "1",
+        "nodeType": "function",
         "props": Object {
-          "children": "PLANETS",
-          "className": "planets",
-          "name": "planets",
-          "onClick": [MockFunction],
+          "choice": "planets",
+          "classes": "inactive",
+          "getInfo": undefined,
+          "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Death-Star-icon.png",
         },
         "ref": null,
-        "rendered": "PLANETS",
-        "type": "button",
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "host",
+        "key": "2",
+        "nodeType": "function",
         "props": Object {
-          "children": "VEHICLES",
-          "className": "vehicles",
-          "name": "vehicles",
-          "onClick": [MockFunction],
+          "choice": "vehicles",
+          "classes": "inactive",
+          "getInfo": undefined,
+          "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Millennium-Falcon-icon.png",
         },
         "ref": null,
-        "rendered": "VEHICLES",
-        "type": "button",
+        "rendered": null,
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -98,27 +92,21 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <button
-            className="people"
-            name="people"
-            onClick={[MockFunction]}
-          >
-            PEOPLE
-          </button>,
-          <button
-            className="planets"
-            name="planets"
-            onClick={[MockFunction]}
-          >
-            PLANETS
-          </button>,
-          <button
-            className="vehicles"
-            name="vehicles"
-            onClick={[MockFunction]}
-          >
-            VEHICLES
-          </button>,
+          <Icon
+            choice="people"
+            classes="inactive"
+            url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Leia-icon.png"
+          />,
+          <Icon
+            choice="planets"
+            classes="inactive"
+            url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Death-Star-icon.png"
+          />,
+          <Icon
+            choice="vehicles"
+            classes="inactive"
+            url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Millennium-Falcon-icon.png"
+          />,
         ],
         "className": "nav",
       },
@@ -126,45 +114,45 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "host",
+          "key": "0",
+          "nodeType": "function",
           "props": Object {
-            "children": "PEOPLE",
-            "className": "people",
-            "name": "people",
-            "onClick": [MockFunction],
+            "choice": "people",
+            "classes": "inactive",
+            "getInfo": undefined,
+            "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Leia-icon.png",
           },
           "ref": null,
-          "rendered": "PEOPLE",
-          "type": "button",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "host",
+          "key": "1",
+          "nodeType": "function",
           "props": Object {
-            "children": "PLANETS",
-            "className": "planets",
-            "name": "planets",
-            "onClick": [MockFunction],
+            "choice": "planets",
+            "classes": "inactive",
+            "getInfo": undefined,
+            "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Death-Star-icon.png",
           },
           "ref": null,
-          "rendered": "PLANETS",
-          "type": "button",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "host",
+          "key": "2",
+          "nodeType": "function",
           "props": Object {
-            "children": "VEHICLES",
-            "className": "vehicles",
-            "name": "vehicles",
-            "onClick": [MockFunction],
+            "choice": "vehicles",
+            "classes": "inactive",
+            "getInfo": undefined,
+            "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/Millennium-Falcon-icon.png",
           },
           "ref": null,
-          "rendered": "VEHICLES",
-          "type": "button",
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",
