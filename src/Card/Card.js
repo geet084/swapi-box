@@ -1,5 +1,6 @@
 import React from 'react'
 import './Card.scss'
+import PropTypes from 'prop-types'
 
 const Card = (props) => {
   const classes = `card ${props.choice}-bg`
@@ -39,4 +40,8 @@ const Card = (props) => {
 
 }
 
+Card.propTypes = {
+  //IS THERE A BETTER WAY TO DO THIS?
+  props: PropTypes.string
+}
 export default Card;

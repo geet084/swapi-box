@@ -1,3 +1,7 @@
+body {
+  background-image: url('../images/sw-bg.png')
+}
+
 .navigation {
   display: flex;
   justify-content: space-around;
@@ -5,10 +9,6 @@
   background-image: url('../images/saber.jpg');
   background-size: 100vw auto;
   background-position-y: center; 
-}
-
-body {
-  background-image: url('../images/sw-bg.png')
 }
 
 .text {

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Icon.scss'
+import PropTypes from 'prop-types'
 
 const Icon = ({url, choice, classes, getInfo, optText}) => {
   
@@ -17,4 +18,11 @@ const Icon = ({url, choice, classes, getInfo, optText}) => {
   )
 }
 
+Icon.protoTypes = {
+  url: PropTypes.string,
+  choice: PropTypes.string,
+  classes: PropTypes.string,
+  getInfo: PropTypes.func,
+  opText: PropTypes.string
+}
 export default Icon;

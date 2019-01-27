@@ -1,6 +1,7 @@
 import React from 'react'
 import './Nav.scss'
 import Icon from '../Icon/Icon'
+import PropTypes from 'prop-types'
 
 const baseURL = 'http://icons.iconarchive.com/icons/sensibleworld/starwars/64/';
 
@@ -39,4 +40,8 @@ const Nav = ({ choice, getInfo }) => {
   )
 }
 
+Nav.propTypes = {
+  choice: PropTypes.string,
+  getInfo: PropTypes.func
+}
 export default Nav;

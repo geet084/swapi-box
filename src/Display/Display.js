@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from '../Card/Card'
 import './Display.scss'
+import PropTypes from 'prop-types'
 
-const Display = (props) => {
-  let { choice, selection } = props;
+const Display = ({ choice, selection }) => {
   
   if (choice !== '' && choice !== 'faves') {
     let cards = selection.map((selected, i) => {
@@ -16,8 +16,10 @@ const Display = (props) => {
       </div>
     )
   } else if (choice === 'faves') { 
-    return (<div></div>)
-
+    return (
+      <div>
+      </div>
+    )
   } else {
     return (
     <div className="select-category">
@@ -29,4 +31,8 @@ const Display = (props) => {
 
 }
 
+Display.protoTypes = {
+  choice: PropTypes.string,
+  selection: PropTypes.string
+}
 export default Display;

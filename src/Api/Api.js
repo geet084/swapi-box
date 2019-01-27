@@ -15,21 +15,22 @@ const fetchFilms = async () => {
 const fetchSelection = async (selection) => {
   let url = 'https://swapi.co/api/'
   let response = await fetch(url + selection)
-  return await response.json()
+  
+  return response.json()
 }
 
 const fetchWorldInfo = async (url) => {
   let response = await fetch(url)
   let world = await response.json()
   
-  return await { homeworld: world.name, population: world.population }
+  return { homeworld: world.name, population: world.population }
 }
 
 const fetchSpeciesInfo = async (url) => {
   let response = await fetch(url)
   let species = await response.json()
 
-  return await {species: species.name}
+  return {species: species.name}
 }
 
 const fetchResidentInfo = async (inhabitants) => {
@@ -39,7 +40,8 @@ const fetchResidentInfo = async (inhabitants) => {
      return data.name
   })
   let residents = await Promise.all(updatedResidents)
-  return await { residents }
+
+  return { residents }
 }
 
 export {

@@ -4,7 +4,7 @@ import ScrollBox from '../ScrollBox/ScrollBox'
 import Favorites from '../Favorites/Favorites'
 import Nav from '../Nav/Nav'
 import Display from '../Display/Display'
-import { fetchFilms, fetchSelection, fetchWorldInfo, fetchSpeciesInfo, fetchResidentInfo } from '../api'
+import { fetchFilms, fetchSelection, fetchWorldInfo, fetchSpeciesInfo, fetchResidentInfo } from '../Api/Api'
 
 
 export default class App extends Component {
@@ -57,22 +57,22 @@ export default class App extends Component {
       let worldInfo = await fetchWorldInfo(person.homeworld);
       let speciesInfo = await fetchSpeciesInfo(person.species);
 
-      return await {
+      return {
         name: person.name,
         homeworld: person.homeworld,
         population: person.population,
         species: person.species,
-        ...worldInfo,
-        ...speciesInfo
+        ...worldInfo, ...speciesInfo
       };
     });
-    return await Promise.all(updatedPeople);
+    return Promise.all(updatedPeople);
   }
 
   async getPlanetInfo(planets) {
     let updatedPlanets = planets.map(async (planet) => {
       let planetInfo = await fetchResidentInfo(planet.residents);
-      return await {
+
+      return {
         name: planet.name,
         terrain: planet.terrain,
         population: planet.population,
@@ -80,7 +80,7 @@ export default class App extends Component {
         residents: planetInfo.residents
       };
     });
-    return await Promise.all(updatedPlanets);
+    return Promise.all(updatedPlanets);
   }
 
   getVehicleInfo = (vehicles) => {
