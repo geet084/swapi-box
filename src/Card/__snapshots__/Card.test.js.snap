@@ -28,19 +28,14 @@ ShallowWrapper {
             className="fas fa-jedi"
           />
         </span>,
-        <p>
-          Name: 
-          hello
-        </p>,
-        <p>
-          HomeWorld: 
-        </p>,
-        <p>
-          Population: 
-        </p>,
-        <p>
-          Species: 
-        </p>,
+        Array [
+          "",
+          <p>
+            name
+            : 
+            hello
+          </p>,
+        ],
       ],
       "className": "card people-bg",
     },
@@ -70,71 +65,23 @@ ShallowWrapper {
         },
         "type": "span",
       },
+      "",
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "name",
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Name: ",
+            "name",
+            ": ",
             "hello",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "Name: ",
+          "name",
+          ": ",
           "hello",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "HomeWorld: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "HomeWorld: ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Population: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Population: ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Species: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Species: ",
-          undefined,
         ],
         "type": "p",
       },
@@ -155,19 +102,14 @@ ShallowWrapper {
               className="fas fa-jedi"
             />
           </span>,
-          <p>
-            Name: 
-            hello
-          </p>,
-          <p>
-            HomeWorld: 
-          </p>,
-          <p>
-            Population: 
-          </p>,
-          <p>
-            Species: 
-          </p>,
+          Array [
+            "",
+            <p>
+              name
+              : 
+              hello
+            </p>,
+          ],
         ],
         "className": "card people-bg",
       },
@@ -197,71 +139,23 @@ ShallowWrapper {
           },
           "type": "span",
         },
+        "",
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "name",
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Name: ",
+              "name",
+              ": ",
               "hello",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Name: ",
+            "name",
+            ": ",
             "hello",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "HomeWorld: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "HomeWorld: ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Population: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Population: ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Species: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Species: ",
-            undefined,
           ],
           "type": "p",
         },
@@ -322,23 +216,17 @@ ShallowWrapper {
             className="fas fa-jedi"
           />
         </span>,
-        <p>
-          Name: 
-          hello
-        </p>,
-        <p>
-          Terrain: 
-        </p>,
-        <p>
-          Population: 
-        </p>,
-        <p>
-          Climate: 
-        </p>,
-        <p>
-          Residents: 
-          bob
-        </p>,
+        Array [
+          "",
+          <p>
+            name
+            : 
+            hello
+          </p>,
+          Array [
+            "residents: bob",
+          ],
+        ],
       ],
       "className": "card planets-bg",
     },
@@ -368,93 +256,27 @@ ShallowWrapper {
         },
         "type": "span",
       },
+      "",
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "name",
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Name: ",
+            "name",
+            ": ",
             "hello",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "Name: ",
+          "name",
+          ": ",
           "hello",
         ],
         "type": "p",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Terrain: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Terrain: ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Population: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Population: ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Climate: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Climate: ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Residents: ",
-            Array [
-              "bob",
-            ],
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Residents: ",
-          "bob",
-        ],
-        "type": "p",
-      },
+      "residents: bob",
     ],
     "type": "div",
   },
@@ -472,23 +294,17 @@ ShallowWrapper {
               className="fas fa-jedi"
             />
           </span>,
-          <p>
-            Name: 
-            hello
-          </p>,
-          <p>
-            Terrain: 
-          </p>,
-          <p>
-            Population: 
-          </p>,
-          <p>
-            Climate: 
-          </p>,
-          <p>
-            Residents: 
-            bob
-          </p>,
+          Array [
+            "",
+            <p>
+              name
+              : 
+              hello
+            </p>,
+            Array [
+              "residents: bob",
+            ],
+          ],
         ],
         "className": "card planets-bg",
       },
@@ -518,93 +334,27 @@ ShallowWrapper {
           },
           "type": "span",
         },
+        "",
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "name",
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Name: ",
+              "name",
+              ": ",
               "hello",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Name: ",
+            "name",
+            ": ",
             "hello",
           ],
           "type": "p",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Terrain: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Terrain: ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Population: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Population: ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Climate: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Climate: ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Residents: ",
-              Array [
-                "bob",
-              ],
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Residents: ",
-            "bob",
-          ],
-          "type": "p",
-        },
+        "residents: bob",
       ],
       "type": "div",
     },
@@ -657,19 +407,14 @@ ShallowWrapper {
             className="fas fa-jedi"
           />
         </span>,
-        <p>
-          Name: 
-          hello
-        </p>,
-        <p>
-          Model: 
-        </p>,
-        <p>
-          Class: 
-        </p>,
-        <p>
-          Passengers: 
-        </p>,
+        Array [
+          "",
+          <p>
+            name
+            : 
+            hello
+          </p>,
+        ],
       ],
       "className": "card vehicles-bg",
     },
@@ -699,71 +444,23 @@ ShallowWrapper {
         },
         "type": "span",
       },
+      "",
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "name",
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Name: ",
+            "name",
+            ": ",
             "hello",
           ],
         },
         "ref": null,
         "rendered": Array [
-          "Name: ",
+          "name",
+          ": ",
           "hello",
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Model: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Model: ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Class: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Class: ",
-          undefined,
-        ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Passengers: ",
-            undefined,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          "Passengers: ",
-          undefined,
         ],
         "type": "p",
       },
@@ -784,19 +481,14 @@ ShallowWrapper {
               className="fas fa-jedi"
             />
           </span>,
-          <p>
-            Name: 
-            hello
-          </p>,
-          <p>
-            Model: 
-          </p>,
-          <p>
-            Class: 
-          </p>,
-          <p>
-            Passengers: 
-          </p>,
+          Array [
+            "",
+            <p>
+              name
+              : 
+              hello
+            </p>,
+          ],
         ],
         "className": "card vehicles-bg",
       },
@@ -826,71 +518,23 @@ ShallowWrapper {
           },
           "type": "span",
         },
+        "",
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "name",
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Name: ",
+              "name",
+              ": ",
               "hello",
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Name: ",
+            "name",
+            ": ",
             "hello",
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Model: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Model: ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Class: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Class: ",
-            undefined,
-          ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Passengers: ",
-              undefined,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            "Passengers: ",
-            undefined,
           ],
           "type": "p",
         },
