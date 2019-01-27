@@ -20,6 +20,7 @@ const fetchSelection = async (selection) => {
 }
 
 const fetchWorldInfo = async (url) => {
+  
   let response = await fetch(url)
   let world = await response.json()
   
@@ -37,10 +38,10 @@ const fetchResidentInfo = async (inhabitants) => {
   let updatedResidents = inhabitants.map(async url => {
     let response = await fetch(url)
     let data = await response.json()
-     return data.name
+    return data.name
   })
   let residents = await Promise.all(updatedResidents)
-
+  
   return { residents }
 }
 
