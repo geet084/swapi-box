@@ -18,11 +18,11 @@ describe('Display', () => {
 
   it('should properly render a chosen category', () => {
     const mockChoice = 'vehicles'
-    const mockThing = { choice: mockChoice, vehicles: [] }
+    const mockThing = [{}] 
     wrapper = shallow(
       <Display
         choice={mockChoice}
-        {...mockThing} />
+        selection={mockThing} />
     )
 
     expect(wrapper).toMatchSnapshot();

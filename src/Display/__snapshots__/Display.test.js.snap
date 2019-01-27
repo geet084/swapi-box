@@ -5,7 +5,11 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Display
     choice="vehicles"
-    vehicles={Array []}
+    selection={
+      Array [
+        Object {},
+      ]
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,11 +24,27 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [],
+      "children": Array [
+        <Card
+          choice="vehicles"
+        />,
+      ],
       "className": "display",
     },
     "ref": null,
-    "rendered": Array [],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "choice": "vehicles",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -33,11 +53,27 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [],
+        "children": Array [
+          <Card
+            choice="vehicles"
+          />,
+        ],
         "className": "display",
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "choice": "vehicles",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
@@ -81,23 +117,44 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <span>
-        select a category
-      </span>,
+      "children": Array [
+        <span
+          className="select"
+        >
+          SELECT A CATEGORY
+        </span>,
+        <span
+          className="category"
+        />,
+      ],
       "className": "select-category",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "select a category",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "SELECT A CATEGORY",
+          "className": "select",
+        },
+        "ref": null,
+        "rendered": "SELECT A CATEGORY",
+        "type": "span",
       },
-      "ref": null,
-      "rendered": "select a category",
-      "type": "span",
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "category",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "span",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -106,23 +163,44 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <span>
-          select a category
-        </span>,
+        "children": Array [
+          <span
+            className="select"
+          >
+            SELECT A CATEGORY
+          </span>,
+          <span
+            className="category"
+          />,
+        ],
         "className": "select-category",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "select a category",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "SELECT A CATEGORY",
+            "className": "select",
+          },
+          "ref": null,
+          "rendered": "SELECT A CATEGORY",
+          "type": "span",
         },
-        "ref": null,
-        "rendered": "select a category",
-        "type": "span",
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "category",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "span",
+        },
+      ],
       "type": "div",
     },
   ],
