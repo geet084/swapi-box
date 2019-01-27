@@ -18,6 +18,7 @@ input:focus {
   border-radius: 100px;
   padding: 5px;
   transition-duration: .3s;
+  margin: -5px;
   &:hover {
     cursor: pointer;
     background-color: green;
@@ -39,3 +40,4 @@ input:focus {
     margin: -5px;
   }
 }
+

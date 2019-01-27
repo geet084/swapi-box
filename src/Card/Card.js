@@ -8,28 +8,40 @@ const Card = (props) => {
  if (props.choice === 'people') {
     return (
       <div className={classes}>
-        <span className="fave-icon">fave</span>
+        <span className="fave-icon">
+          <i className="fas fa-jedi"></i>
+        </span>
         <p>Name: {props.name}</p>
         <p>HomeWorld: {props.homeworld}</p>
         <p>Population: {props.population}</p>
         <p>Species: {props.species}</p>
       </div>
     )
-  } else if (props.choice === 'planets') {
+ } else if (props.choice === 'planets') {
+   console.log(props)
+   let residents = props.residents.map((resident, i) => {
+     if (i === 0) return `${resident}`
+     else return `,  ${resident}`
+   })
+
     return (
       <div className={classes}>
-        <span className="fave-icon">fave</span>
+        <span className="fave-icon">
+          <i className="fas fa-jedi"></i>
+        </span>
         <p>Name: {props.name}</p>
         <p>Terrain: {props.terrain}</p>
         <p>Population: {props.population}</p>
         <p>Climate: {props.climate}</p>
-        <p>Residents: {props.residents}</p>
+        <p>Residents: {residents}</p>
       </div>
     )
   } else {
     return (
       <div className={classes}>
-        <span className="fave-icon">fave</span>
+        <span className="fave-icon">
+          <i className="fas fa-jedi"></i>
+        </span>
         <p>Name: {props.name}</p>
         <p>Model: {props.model}</p>
         <p>Class: {props.vehicle_class}</p>
