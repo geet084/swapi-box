@@ -4,7 +4,7 @@ exports[`Favorites should properly render snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Favorites
-    showFavorites={[MockFunction]}
+    newScroll={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,15 +20,17 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2>
-          SWAPI BOX
-        </h2>,
-        <button
-          className="faves"
+        <h2
+          className="swapi"
           onClick={[MockFunction]}
         >
-          Favorites
-        </button>,
+          SWAPI BOX
+        </h2>,
+        <Icon
+          classes="inactive"
+          optText="undefined favorites"
+          url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/R2D2-icon.png"
+        />,
       ],
       "className": "favorites",
     },
@@ -40,6 +42,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "SWAPI BOX",
+          "className": "swapi",
+          "onClick": [MockFunction],
         },
         "ref": null,
         "rendered": "SWAPI BOX",
@@ -48,15 +52,16 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
-          "children": "Favorites",
-          "className": "faves",
-          "onClick": [MockFunction],
+          "classes": "inactive",
+          "getInfo": undefined,
+          "optText": "undefined favorites",
+          "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/R2D2-icon.png",
         },
         "ref": null,
-        "rendered": "Favorites",
-        "type": "button",
+        "rendered": null,
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -68,15 +73,17 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2>
-            SWAPI BOX
-          </h2>,
-          <button
-            className="faves"
+          <h2
+            className="swapi"
             onClick={[MockFunction]}
           >
-            Favorites
-          </button>,
+            SWAPI BOX
+          </h2>,
+          <Icon
+            classes="inactive"
+            optText="undefined favorites"
+            url="http://icons.iconarchive.com/icons/sensibleworld/starwars/64/R2D2-icon.png"
+          />,
         ],
         "className": "favorites",
       },
@@ -88,6 +95,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "SWAPI BOX",
+            "className": "swapi",
+            "onClick": [MockFunction],
           },
           "ref": null,
           "rendered": "SWAPI BOX",
@@ -96,15 +105,16 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "children": "Favorites",
-            "className": "faves",
-            "onClick": [MockFunction],
+            "classes": "inactive",
+            "getInfo": undefined,
+            "optText": "undefined favorites",
+            "url": "http://icons.iconarchive.com/icons/sensibleworld/starwars/64/R2D2-icon.png",
           },
           "ref": null,
-          "rendered": "Favorites",
-          "type": "button",
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

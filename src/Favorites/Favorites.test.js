@@ -4,11 +4,11 @@ import Favorites from './Favorites'
 
 describe('Favorites', () => {
   let wrapper;
-  const mockShowFavorites = jest.fn();
+  const mockNewScroll = jest.fn();
 
   beforeEach(() => {
     wrapper = shallow(
-      <Favorites showFavorites={mockShowFavorites}/>
+      <Favorites newScroll={mockNewScroll}/>
     )
   })
 
@@ -17,8 +17,8 @@ describe('Favorites', () => {
   })
 
   it('should register a click on the button', () => {
-    wrapper.find('.faves').simulate('click');
-    expect(mockShowFavorites).toHaveBeenCalled();
+    wrapper.find('.swapi').simulate('click');
+    expect(mockNewScroll).toHaveBeenCalled();
   })
 
 })
