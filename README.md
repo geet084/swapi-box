@@ -27,7 +27,7 @@
 - Swapi API fetch
 
 ### Deployed Website
-[Study Time](https://geet084.github.io/swapi-box/.)
+[Swapi Box](https://geet084.github.io/swapi-box/.)
 
 ### Next Steps
 #### Future iterations of the project could include:
