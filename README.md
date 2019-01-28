@@ -32,9 +32,12 @@
 ### Next Steps
 #### Future iterations of the project could include:
 
-- Add ability to save/show favorites
+- Add favorites functionality
+  - Be able to favorite a card
+  - Be able to unfavorite one
+  - Be able to see all favorited cards
 - Add ability to show more than just 10 cards
-- Add local storage
+- Incorporate local storage
   
 
 ### Wireframe
