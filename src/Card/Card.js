@@ -3,9 +3,7 @@ import './Card.scss'
 import PropTypes from 'prop-types'
 
 const Card = (props) => {
-  const classes = `card ${props.choice}-bg`
-
-
+  
   let content = Object.keys(props).map(item => {
     if (item === 'residents') {
       return item = props.residents.map((resident, i) => {
@@ -18,7 +16,7 @@ const Card = (props) => {
   })
 
   return (
-    <div className={classes}>
+    <div className={`card ${props.choice}-bg`}>
       <span className="fave-icon">
         <i className="fas fa-jedi"></i>
       </span>
