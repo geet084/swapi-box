@@ -12,10 +12,9 @@
 
 #### Background/About
 
-#### about info
+#### This project was implemented to introduce us to using linked lists as well as to solidify our knowledge of react and Test Driven Development. For this project we were tasked with creating a website that would display people, planets, and vehicles via various fetch calls and data manipulation. We were also integrating a test suite wherein we practiced extensively testing each component on not only what should go right, but also when things go wrong.
 
 #### Screenshots
-![video](https://user-images.githubusercontent.com/39391585/51842924-3b4d3100-22cf-11e9-9649-8d13ad4aef35.gif)
 
 ### Primary Technologies Used
 
@@ -24,7 +23,7 @@
 - Jest
 - Enzyme
 - Sass
-- Swapi API fetch
+- Swapi API
 
 ### Deployed Website
 [Swapi Box](https://geet084.github.io/swapi-box/.)
