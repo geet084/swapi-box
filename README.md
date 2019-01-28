@@ -15,7 +15,7 @@
 #### This project was implemented to introduce us to using linked lists as well as to solidify our knowledge of react and Test Driven Development. For this project we were tasked with creating a website that would display people, planets, and vehicles via various fetch calls and data manipulation. We were also integrating a test suite wherein we practiced extensively testing each component on not only what should go right, but also when things go wrong.
 
 #### Screenshots
-![video](https://user-images.githubusercontent.com/39391585/51842924-3b4d3100-22cf-11e9-9649-8d13ad4aef35.gif)
+![video](https://user-images.githubusercontent.com/39391585/51846866-ae5aa580-22d7-11e9-8adf-77af80dd3a10.gif)
 
 ### Primary Technologies Used
 
@@ -32,7 +32,12 @@
 ### Next Steps
 #### Future iterations of the project could include:
 
-- Add ability to save favorites
+- Add favorites functionality
+  - Be able to favorite a card
+  - Be able to unfavorite one
+  - Be able to see all favorited cards
+- Add ability to show more than just 10 cards
+- Incorporate local storage
   
 
 ### Wireframe
