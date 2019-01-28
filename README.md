@@ -32,7 +32,9 @@
 ### Next Steps
 #### Future iterations of the project could include:
 
-- Add ability to save favorites
+- Add ability to save/show favorites
+- Add ability to show more than just 10 cards
+- Add local storage
   
 
 ### Wireframe
