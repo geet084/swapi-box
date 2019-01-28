@@ -9,7 +9,7 @@ const Card = (props) => {
   let content = Object.keys(props).map(item => {
     if (item === 'residents') {
       return item = props.residents.map((resident, i) => {
-        if (i === 0) return `residents: ${resident}`
+        if (i === 0) return `Residents: ${resident}`
         else return `,  ${resident}`
       })
     } else if (item !== 'choice') {

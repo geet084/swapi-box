@@ -78,7 +78,7 @@ export default class App extends Component {
         Terrain: planet.terrain,
         Population: planet.population,
         Climate: planet.climate,
-        Residents: planetInfo.residents
+        residents: planetInfo.residents
       };
     });
     return Promise.all(updatedPlanets);
