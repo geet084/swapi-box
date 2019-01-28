@@ -54,18 +54,16 @@ export default class App extends Component {
     })
   }
 
-
   async getPeopleInfo(people) {
     let updatedPeople = people.map(async (person) => {
       let worldInfo = await fetchWorldInfo(person.homeworld);
       let speciesInfo = await fetchSpeciesInfo(person.species);
-
+      
       return {
-        name: person.name,
-        homeworld: person.homeworld,
-        population: person.population,
-        species: person.species,
-        ...worldInfo, ...speciesInfo
+        Name: person.name,
+        Homeworld: worldInfo.homeworld,
+        Population: worldInfo.population,
+        Species: speciesInfo.species,
       };
     });
     return Promise.all(updatedPeople);
@@ -76,11 +74,11 @@ export default class App extends Component {
       let planetInfo = await fetchResidentInfo(planet.residents);
 
       return {
-        name: planet.name,
-        terrain: planet.terrain,
-        population: planet.population,
-        climate: planet.climate,
-        residents: planetInfo.residents
+        Name: planet.name,
+        Terrain: planet.terrain,
+        Population: planet.population,
+        Climate: planet.climate,
+        Residents: planetInfo.residents
       };
     });
     return Promise.all(updatedPlanets);
@@ -89,10 +87,10 @@ export default class App extends Component {
   getVehicleInfo = (vehicles) => {
     return vehicles.map(vehicle => {
       return {
-        name: vehicle.name,
-        model: vehicle.model,
-        vehicle_class: vehicle.vehicle_class,
-        passengers: vehicle.passengers
+        Name: vehicle.name,
+        Model: vehicle.model,
+        Class: vehicle.vehicle_class,
+        Passengers: vehicle.passengers
       }
     })
   }
