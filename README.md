@@ -15,6 +15,7 @@
 #### about info
 
 #### Screenshots
+![video](https://user-images.githubusercontent.com/39391585/51842924-3b4d3100-22cf-11e9-9649-8d13ad4aef35.gif)
 
 ### Primary Technologies Used
 
@@ -35,6 +36,7 @@
   
 
 ### Wireframe
+![wireframe](https://user-images.githubusercontent.com/39391585/51842628-8fa3e100-22ce-11e9-94d6-87b140e14748.png)
 
 
 ## Contributor
